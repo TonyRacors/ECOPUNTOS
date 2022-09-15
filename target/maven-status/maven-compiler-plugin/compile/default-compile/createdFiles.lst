@@ -1,0 +1,4 @@
+servlets\PruebaServlet.class
+beans\Recoleccion.class
+beans\Residuos.class
+beans\Usuarios.class
