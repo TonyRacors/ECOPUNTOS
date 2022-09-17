@@ -2,3 +2,5 @@ servlets\PruebaServlet.class
 beans\Recoleccion.class
 beans\Residuos.class
 beans\Usuarios.class
+test\OperacionesBD.class
+connection\DBConnection.class
