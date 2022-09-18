@@ -26,14 +26,5 @@ input {
 }
 
 body {
-            background: url("../img/fondo.jpg"); 
-            background-size: cover;
-            background-repeat: no-repeat;
-            margin: 0;
-            height: 100vh;   
-            
-            font-family:Segoe UI Semibold;
-            color:black;
-            weigth:lighter;
-                        
+            background: url("../img/fondo-registro.jpg");
         }
