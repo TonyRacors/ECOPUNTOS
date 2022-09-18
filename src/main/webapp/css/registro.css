@@ -28,3 +28,18 @@ input {
 body {
             background: url("../img/fondo-registro.jpg");
         }
+        
+        
+/* Login */ 
+.container{
+    margin-top: 40px;  
+}
+        
+.btn-success{
+         background-color: #269b38  
+}
+
+.btn-ingreso{
+        margin-top: 20px;
+        margin-bottom: 10px;
+}
