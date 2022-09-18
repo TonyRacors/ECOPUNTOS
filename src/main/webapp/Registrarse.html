@@ -22,128 +22,136 @@
                 integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
 
-        <script src="js/registro.js"></script>
         <link href="css/registro.css" rel="stylesheet">
         <link rel="icon" href="img/icono-registro.png"/>
+
 
     </head>
 
     <body>
-        <div class="body" style="margin-top:5px;">
-        
-        <main>
-            
-            <div class="row">
-                    <div class="col-12">
-                        <a title="Volver a la página principal" href="index.html" style="margin:10px;"><img src="img/regresar.png" alt="Volver al inicio" width="40" height="40"/></a>
+        <div class="body">
+
+            <main>
+
+
+
+                <div class="card d-flex justify-content-center align-items-center vh-100"
+                     style="padding: 10px; box-shadow: 7px 13px 37px #000;  margin:auto; margin-top:auto; background:#47d52459; "
+                     >
+
+                    <div class="row" >
+                        <div class="col-12">
+                            <a title="Volver a la página principal" href="index.html"><img src="img/regresar.png" alt="Volver al inicio" width="40" height="40"/></a>
+                        </div>
                     </div>
-                </div>
-            
-            <div class="card d-flex justify-content-center align-items-center"
-                 style="padding: 10px; box-shadow: 7px 13px 37px #000; width:700px; margin:auto; margin-top:auto; background:#113446d0; color:rgb(241, 237, 237)"
-                 >
-          
-                <h1>¡Crea tu cuenta!</h1>
 
-                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1>¡Crea tu cuenta!</h1>
+                        </div>
+                    </div>
+                    
+                    <div class="container">
 
-                    <form id="Registro_usuarios" style="margin:auto">
 
-                        <!-- Tipos de usuarios -->
-                        <div class="row">
-                            <div class="col-12 d-flex align-items-center">Tipo de usuario: </div>
+                        <form id="Registro_usuarios" style="margin:auto" >
 
-                            <div class="col-12 col-sm-4 d-flex align-items-center"><input type="radio"
+                            <!-- Tipos de usuarios -->
+                            <div class="row">
+                                <div class="col-12 d-flex align-items-center">Tipo de usuario: </div>
+
+                                <div class="col-12 col-sm-4 d-flex align-items-center"><input type="radio"
                                                                                               id="tipo_usuario" value="Persona" name="Tipo_Usuario" onclick="Mostrar()" required> Persona</div>
 
-                            <div class="col-12 col-sm-4 d-flex align-items-center"><input type="radio"
+                                <div class="col-12 col-sm-4 d-flex align-items-center"><input type="radio"
                                                                                               id="tipo_usuario" value="Comercio" name="Tipo_Usuario" onclick="ocultar.style.display = 'none'" required> Comercio</div>
 
-                            <div class="col-12 col-sm-4 d-flex align-items-center"><input type="radio" id="tipo_usuario"
+                                <div class="col-12 col-sm-4 d-flex align-items-center"><input type="radio" id="tipo_usuario"
                                                                                               value="Unidad residencial" name="Tipo_Usuario" onclick="Mostrar()" required> Unidad residencial</div>
-                        </div>
+                            </div>
 
-                        <!-- Nombre y apellido -->
-                        <div class="row">
-                            
-                            <div class="col-12 col-sm-6 ">Nombre (*):<br>
-                                <input type="text" class="cuadros" name="Nombre" id="nombre"
-                                       placeholder="Ingresa el nombre de la entidad." pattern="[A-Za-z0-9]{3,40}" required>
-                            </div>
-                            
-                            
-                            <div id="ocultar" class="col-12 col-sm-6">Apellido (*)<br>
-                                <input class="cuadros" type="text" name="Apellido" id="apellido"
-                                       placeholder="Ingresa tu apellido." pattern="[A-Za-z0-9]{3,40}" required>
-                            </div>
-                        </div>
+                            <!-- Nombre y apellido -->
+                            <div class="row">
 
-                        <!-- Correo -->
-                        <div class="row">
-                            
-                            <div class="col-12">Correo electrónico (*):<br>
-                                <input type="email" class="cuadros" name="Correo" id="correo"
-                                       placeholder="Ingresa el correo electrónico" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,40}" required>
-                            </div>
-                        </div>
+                                <div class="col-12 col-sm-6 ">Nombre (*):<br>
+                                    <input type="text" class="cuadros" name="Nombre" id="nombre"
+                                           placeholder="Ingresa el nombre de la entidad." pattern="[A-Za-z0-9]{3,40}" required>
+                                </div>
 
-                        <!-- Clave y confirmación -->
-                        <div class="row">
-                            
-                            <div class="col-12 col-sm-6">Contraseña (*):<br>
-                                <input type="password" class="cuadros" name="Nombre" id="clave1"
-                                       placeholder="La contraseña debe tener mínimo 8 dígitos." pattern="[a-zA-Z0-9_]{8,15}" required>
-                            </div>
-                            
-                            
-                            <div class="col-12 col-sm-6">Verifica la contraseña:<br>
-                                <input class="cuadros" type="password" name="Apellido" id="clave2"
-                                       placeholder="Repite tu contraseña." pattern="[a-zA-Z0-9_]{8,15}" onclick="ValidarClave()" required>
-                            </div>
-                        </div>
 
-                        <!-- Dirección y teléfono -->
-                        <div class="row">
-                            
-                            <div class="col-12 col-sm-6">Dirección (*):<br>
-                                <input type="text" class="cuadros" name="Direccion" id="direccion"
-                                       placeholder="Ingresa tu dirección." required>
+                                <div id="ocultar" class="col-12 col-sm-6">Apellido (*)<br>
+                                    <input class="cuadros" type="text" name="Apellido" id="apellido"
+                                           placeholder="Ingresa tu apellido." pattern="[A-Za-z0-9]{3,40}" required>
+                                </div>
                             </div>
-                            
-                            
-                            <div class="col-12 col-sm-6">Teléfono (*):<br>
-                                <input class="cuadros" type="tel" name="Teléfono" id="telefono"
-                                       placeholder="El teléfono debe tener 10 dígitos." pattern="[0-9]{10}" required>
-                            </div>
-                            
-                        </div>
 
-                        <!-- Términos y condiciones -->
-                        <p></p>
-                        <div class="row">
-                            <div class="col-12 d-flex justify-content-center align-items-center">
-                                <p><input type="checkbox" name="T&C" id="T_C" required> Estoy de acuerdo con los <a href="#"
-                                                         style="text-decoration:none; color:white">
-                                        términos y condiciones.</a></p>
-                            </div>
-                        </div>
+                            <!-- Correo -->
+                            <div class="row">
 
-                        <!-- Botón registrarse -->
-                        <div class="row">
-                            <div class="col-12 d-flex justify-content-center align-items-center">
-                                <button type="submit" class="btn btn-primary " onclick="JavaScript:return ValidarClave()"
-                                        value="Registrar">Registrarse</button>
+                                <div class="col-12">Correo electrónico (*):<br>
+                                    <input type="email" class="cuadros" name="Correo" id="correo"
+                                           placeholder="Ingresa el correo electrónico" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,40}" required>
+                                </div>
                             </div>
-                        </div>
-                    </form>
+
+                            <!-- Clave y confirmación -->
+                            <div class="row">
+
+                                <div class="col-12 col-sm-6">Contraseña (*):<br>
+                                    <input type="password" class="cuadros" name="Nombre" id="clave1"
+                                           placeholder="La contraseña debe tener mínimo 8 dígitos." pattern="[a-zA-Z0-9_]{8,15}" required>
+                                </div>
+
+
+                                <div class="col-12 col-sm-6">Verifica la contraseña:<br>
+                                    <input class="cuadros" type="password" name="Apellido" id="clave2"
+                                           placeholder="Repite tu contraseña." pattern="[a-zA-Z0-9_]{8,15}" onclick="ValidarClave()" required>
+                                </div>
+                            </div>
+
+                            <!-- Dirección y teléfono -->
+                            <div class="row">
+
+                                <div class="col-12 col-sm-6">Dirección (*):<br>
+                                    <input type="text" class="cuadros" name="Direccion" id="direccion"
+                                           placeholder="Ingresa tu dirección." required>
+                                </div>
+
+
+                                <div class="col-12 col-sm-6">Teléfono (*):<br>
+                                    <input class="cuadros" type="tel" name="Teléfono" id="telefono"
+                                           placeholder="El teléfono debe tener 10 dígitos." pattern="[0-9]{10}" required>
+                                </div>
+
+                            </div>
+
+                            <!-- Términos y condiciones -->
+                            <p></p>
+                            <div class="row">
+                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                    <p><input type="checkbox" name="T&C" id="T_C" required> Estoy de acuerdo con los <a href="#"
+                                                style="text-decoration:none; color:black">
+                                            términos y condiciones.</a></p>
+                                </div>
+                            </div>
+
+                            <!-- Botón registrarse -->
+                            <div class="row">
+                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                    <button type="submit" class="btn btn-primary " onclick="JavaScript:return ValidarClave()"
+                                            value="Registrar">Registrarse</button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                    
 
                 </div>
 
-            </div>
+            </main>
 
-        </main>
-            
-            </div>
+        </div>
         <script>
             function ValidarClave() {
                 var contraseña1 = document.getElementById("clave1").value;
