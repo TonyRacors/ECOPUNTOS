@@ -23,17 +23,17 @@
 
         <script src="js/index.js"></script>
         <link href="css/registro.css" rel="stylesheet">
-        
+
     </head>
     <body>
         <h1>Logo</h1>
-        
-         <main>
-            
+
+        <main>
+
             <div class="card d-flex justify-content-center align-items-center"
                  style="padding: 10px; box-shadow: 7px 13px 37px #000; width:600px; margin:auto; margin-top: 60px; background:#113446d0; color:rgb(241, 237, 237)"
                  >
-          
+
                 <h1>Bienvenido</h1>
 
                 <div class="container">
@@ -45,7 +45,7 @@
                                 <p></p>
                                 <div class="col-12">Correo electrónico (*):<br>
                                     <input type="email" class="col-12 cuadros" name="Correo" id="correo"
-                                        pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,40}" required>
+                                           pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,40}" required>
                                 </div>
                             </div>
 
@@ -53,30 +53,33 @@
                                 <p></p>
                                 <div class="col-12">Contraseña (*):<br>
                                     <input type="password" class="col-12 cuadros" name="Nombre" id="clave"
-                                          title="La contraseña debe tener mínimo 8 dígitos" pattern="[a-zA-Z0-9_]{8,15}" required>
+                                           title="La contraseña debe tener mínimo 8 dígitos" pattern="[a-zA-Z0-9_]{8,15}" required>
                                 </div>
                             </div>
                         </div>
-                            
+
                         <div class="row">
                             <div class="col-12 d-flex justify-content-center align-items-center">
                                 <button type="submit" class="btn btn-primary btn-ingreso" value="Registrar">Ingresar</button>
                             </div>
                         </div>
-                       
+
                         <div class="row">
                             <div class="col-12 d-flex justify-content-center align-items-center">
                                 <p><input type="checkbox" name="oC" id="olvidasteContrasenia" required> ¿Olvidaste la contraseña?</p>
                             </div>
                         </div>
-                        
-                    </form>
-                     <div class="row">
-                            <div class="col-12 d-flex justify-content-center align-items-center">
-                                <a href="Registrarse.html"><button type="submit" class="btn btn-success" value="cuenta">Crear Cuenta</button></a>
-                            </div>
-                        </div>
 
+                    </form>
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-center align-items-center">
+                            <a href="Registrarse.html"><button type="submit" class="btn btn-success" value="cuenta">Crear Cuenta</button></a>
+                        </div>
+                    </div>
+                    <div id="login-error" class="alert alert-danger d-none" role="alert">Usuario o contraseña incorrectos
+                        
+                    </div>
+                
                 </div>
 
             </div>
