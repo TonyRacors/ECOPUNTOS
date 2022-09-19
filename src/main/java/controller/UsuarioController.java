@@ -9,10 +9,10 @@ import connection.DBConnection;
 
 public class UsuarioController implements IUsuarioController{
     @Override
-    public String login(String correo, String contrasena){
+    public String login(String email, String contrasena){
         Gson gson = new Gson();
         DBConnection con = new DBConnection();
-        String sql = "SELECT FROM usuarios WHERE email='"+correo+"' AND contrasena = '"+contrasena+"'";
+        String sql = "SELECT FROM usuarios WHERE email='"+email+"' AND contrasena = '"+contrasena+"'";
         try {
             Statement st = con.getConnection().createStatement();
             ResultSet rs = st.executeQuery(sql);
@@ -25,7 +25,7 @@ public class UsuarioController implements IUsuarioController{
                 String tipo_usuario = rs.getString("tipo_usuario");
                 int total_ecopuntos = rs.getInt("total_ecopuntos");
                 int saldo_ecopuntos = rs.getInt("saldo_ecopuntos");
-                Usuarios usuario =new Usuarios(id_usuario, correo, contrasena, nombre, apellido,
+                Usuarios usuario =new Usuarios(id_usuario, email, contrasena, nombre, apellido,
                         direccion, telefono, tipo_usuario, total_ecopuntos, saldo_ecopuntos);
                 return gson.toJson(usuario);
             }
