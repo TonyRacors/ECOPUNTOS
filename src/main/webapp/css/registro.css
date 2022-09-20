@@ -26,7 +26,7 @@ input {
 }
 
 body {
-    background: url("../img/fondo.jpg");
+    background: url("../img/registrofondo.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
@@ -36,6 +36,13 @@ body {
 
 
 /* Login */
+.body-login {
+            background: url("../img/imagenLogin.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            height: 100vh;
+        }
 .container{
     margin-top: 40px;
 }
