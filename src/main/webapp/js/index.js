@@ -26,11 +26,11 @@ function autenticarUsuario() {
         success: function (result) {
             let parsedResult = JSON.parse(result);
             if (parsedResult != false) {
-                $("#login-error").addClass("d-none");
+                $("#ingreso-mal").addClass("d-none");
                 let email = parsedResult['email'];
-                document.location.href = "home.html?username=" + email;
+                document.location.href = "home.html?email=" + email;
             } else {
-                $("#login-error").removeClass("d-none");
+                $("#ingreso-mal").removeClass("d-none");
             }
         }
     });
