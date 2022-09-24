@@ -9,21 +9,21 @@ package beans;
  * @author servi
  */
 public class Usuarios {
-    private int id_usuario;
-    private String email;
+    private String username;
     private String contrasena;
+    private String email;
     private String nombre;
     private String apellido;
     private String direccion;
-    private int telefono;
+    private String telefono;
     private String tipo_usuario;
     private int total_ecopuntos;
     private int saldo_ecopuntos;
 
-    public Usuarios(int id_usuario, String email, String contrasena, String nombre, String apellido, String direccion, int telefono, String tipo_usuario, int total_ecopuntos, int saldo_ecopuntos) {
-        this.id_usuario = id_usuario;
-        this.email = email;
+    public Usuarios(String username, String contrasena, String email, String nombre, String apellido, String direccion, String telefono, String tipo_usuario, int total_ecopuntos, int saldo_ecopuntos) {
+        this.username = username;
         this.contrasena = contrasena;
+        this.email = email;
         this.nombre = nombre;
         this.apellido = apellido;
         this.direccion = direccion;
@@ -33,20 +33,12 @@ public class Usuarios {
         this.saldo_ecopuntos = saldo_ecopuntos;
     }
 
-    public int getId_usuario() {
-        return id_usuario;
+    public String getUsername() {
+        return username;
     }
 
-    public void setId_usuario(int id_usuario) {
-        this.id_usuario = id_usuario;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getContrasena() {
@@ -55,6 +47,14 @@ public class Usuarios {
 
     public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getNombre() {
@@ -81,11 +81,11 @@ public class Usuarios {
         this.direccion = direccion;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
@@ -115,8 +115,10 @@ public class Usuarios {
 
     @Override
     public String toString() {
-        return "Usuarios{" + "id_usuario=" + id_usuario + ", email=" + email + ", contrasena=" + contrasena + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", telefono=" + telefono + ", tipo_usuario=" + tipo_usuario + ", total_ecopuntos=" + total_ecopuntos + ", saldo_ecopuntos=" + saldo_ecopuntos + '}';
+        return "Usuarios{" + "username=" + username + ", contrasena=" + contrasena + ", email=" + email + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", telefono=" + telefono + ", tipo_usuario=" + tipo_usuario + ", total_ecopuntos=" + total_ecopuntos + ", saldo_ecopuntos=" + saldo_ecopuntos + '}';
     }
+
+   
     
     
     

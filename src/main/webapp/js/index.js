@@ -12,7 +12,7 @@ $(document).ready(function () {
 
 function autenticarUsuario() {
 
-    let email = $("#correo").val();
+    let username = $("#usuario").val();
     let contrasena = $("#clave").val();
 
     $.ajax({
@@ -20,15 +20,15 @@ function autenticarUsuario() {
         dataType: "html",
         url: "./ServletUsuarioLogin",
         data: $.param({
-            email: email,
+            username: username,
             contrasena: contrasena
         }),
         success: function (result) {
             let parsedResult = JSON.parse(result);
             if (parsedResult != false) {
                 $("#ingreso-mal").addClass("d-none");
-                let email = parsedResult['email'];
-                document.location.href = "home.html?email=" + email;
+                let username = parsedResult['username'];
+                document.location.href = "home.html?username=" + username;
             } else {
                 $("#ingreso-mal").removeClass("d-none");
             }

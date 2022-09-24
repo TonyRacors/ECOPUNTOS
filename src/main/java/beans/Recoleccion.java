@@ -13,17 +13,17 @@ import java.sql.Date;
 public class Recoleccion {
     private int n_solicitud;
     private Date fecha;
+    private String username;
     private int id_residuo;
-    private int id_usuario;
     private int cantidad_kg;
     private int venta_material;
     private int ecoPuntos_ganados;
 
-    public Recoleccion(int n_solicitud, Date fecha, int id_residuo, int id_usuario, int cantidad_kg, int venta_material, int ecoPuntos_ganados) {
+    public Recoleccion(int n_solicitud, Date fecha, String username, int id_residuo, int cantidad_kg, int venta_material, int ecoPuntos_ganados) {
         this.n_solicitud = n_solicitud;
         this.fecha = fecha;
+        this.username = username;
         this.id_residuo = id_residuo;
-        this.id_usuario = id_usuario;
         this.cantidad_kg = cantidad_kg;
         this.venta_material = venta_material;
         this.ecoPuntos_ganados = ecoPuntos_ganados;
@@ -45,20 +45,20 @@ public class Recoleccion {
         this.fecha = fecha;
     }
 
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     public int getId_residuo() {
         return id_residuo;
     }
 
     public void setId_residuo(int id_residuo) {
         this.id_residuo = id_residuo;
-    }
-
-    public int getId_usuario() {
-        return id_usuario;
-    }
-
-    public void setId_usuario(int id_usuario) {
-        this.id_usuario = id_usuario;
     }
 
     public int getCantidad_kg() {
@@ -87,9 +87,10 @@ public class Recoleccion {
 
     @Override
     public String toString() {
-        return "Recoleccion{" + "n_solicitud=" + n_solicitud + ", fecha=" + fecha + ", id_residuo=" + id_residuo + ", id_usuario=" + id_usuario + ", cantidad_kg=" + cantidad_kg + ", venta_material=" + venta_material + ", ecoPuntos_ganados=" + ecoPuntos_ganados + '}';
+        return "Recoleccion{" + "n_solicitud=" + n_solicitud + ", fecha=" + fecha + ", username=" + username + ", id_residuo=" + id_residuo + ", cantidad_kg=" + cantidad_kg + ", venta_material=" + venta_material + ", ecoPuntos_ganados=" + ecoPuntos_ganados + '}';
     }
 
+   
     
     
     

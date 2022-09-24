@@ -34,9 +34,9 @@ public class ServletUsuarioLogin extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		UsuarioController usuario = new UsuarioController();
-		String email = request.getParameter("email");
+		String username = request.getParameter("username");
 		String contrasena = request.getParameter("contrasena");
-		String result = usuario.login(email, contrasena);
+		String result = usuario.login(username, contrasena);
 		
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
