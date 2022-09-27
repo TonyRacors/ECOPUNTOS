@@ -57,6 +57,11 @@
   margin-top:10px;
 }
 
+.form-solicitud label{
+  margin:auto;
+  font-size: 20px;
+}
+
 .form-solicitud a:hover {
   color:black;
   text-decoration: underline;
