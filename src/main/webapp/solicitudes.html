@@ -25,7 +25,7 @@
 
     <link rel="shorcut icon" href="https://cdn-icons-png.flaticon.com/512/1676/1676807.png">
 
-    <link href="../css/solicitudes.css" rel="stylesheet">
+    <link href="css/solicitudes.css" rel="stylesheet">
 
     <script>
 
@@ -34,7 +34,7 @@
             var aviso = document.getElementById("SMaterial");
             var checkP = document.getElementById("id_residuoP");
 
-            if (checkP.checked) { papel.style.display = 'block';  aviso.style.display='none'}
+            if (checkP.checked) { papel.style.display = 'block'; aviso.style.display = 'none' }
             else { papel.style.display = 'none'; }
         }
 
@@ -43,7 +43,7 @@
             var checkC = document.getElementById("id_residuoC");
             var aviso = document.getElementById("SMaterial");
 
-            if (checkC.checked) { carton.style.display = 'block'; aviso.style.display='none'}
+            if (checkC.checked) { carton.style.display = 'block'; aviso.style.display = 'none' }
             else { carton.style.display = 'none'; }
         }
 
@@ -52,7 +52,7 @@
             var checkV = document.getElementById("id_residuoV");
             var aviso = document.getElementById("SMaterial");
 
-            if (checkV.checked) { vidrio.style.display = 'block'; aviso.style.display='none'}
+            if (checkV.checked) { vidrio.style.display = 'block'; aviso.style.display = 'none' }
             else { vidrio.style.display = 'none'; }
         }
 
@@ -61,7 +61,7 @@
             var checkPl = document.getElementById("id_residuoPl");
             var aviso = document.getElementById("SMaterial");
 
-            if (checkPl.checked) { plastico.style.display = 'block'; aviso.style.display='none'}
+            if (checkPl.checked) { plastico.style.display = 'block'; aviso.style.display = 'none' }
             else { plastico.style.display = 'none'; }
         }
 
@@ -70,7 +70,7 @@
             var checkM = document.getElementById("id_residuoM");
             var aviso = document.getElementById("SMaterial");
 
-            if (checkM.checked) { metal.style.display = 'block'; aviso.style.display='none'}
+            if (checkM.checked) { metal.style.display = 'block'; aviso.style.display = 'none' }
             else { metal.style.display = 'none'; }
         }
 
@@ -79,7 +79,7 @@
             var checkA = document.getElementById("id_residuoA");
             var aviso = document.getElementById("SMaterial");
 
-            if (checkA.checked) { aceite.style.display = 'block'; aviso.style.display='none'}
+            if (checkA.checked) { aceite.style.display = 'block'; aviso.style.display = 'none' }
             else { aceite.style.display = 'none'; }
         }
 
@@ -138,29 +138,46 @@
                 </h4>
             </div>
 
-            <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center"><input type="checkbox"
-                    id="id_residuoP" value="1" name="Papel" onclick="MostrarP()">Papel
-            </div>
+            <label for="C_papel">
+                <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center"><input type="checkbox"
+                        id="id_residuoP" value="1" name="Papel" onclick="MostrarP()">Papel
+                </div>
+            </label>
 
-            <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center"><input type="checkbox"
-                    id="id_residuoC" value="2" name="Cartón" onclick="MostrarC()">Cartón
-            </div>
+            <label for="C_carton">
+                <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center"><input type="checkbox"
+                        id="id_residuoC" value="2" name="Cartón" onclick="MostrarC()">Cartón
+                </div>
+            </label>
 
-            <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center"><input type="checkbox"
-                    id="id_residuoV" value="3" name="Vidrio" onclick="MostrarV()">Vidrio
-            </div>
 
-            <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center"><input type="checkbox"
-                    id="id_residuoPl" value="4" name="Plástico" onclick="MostrarPl()">Plástico
-            </div>
+            <label for="C_vidrio">
+                <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center"><input type="checkbox"
+                        id="id_residuoV" value="3" name="Vidrio" onclick="MostrarV()">Vidrio
+                </div>
+            </label>
 
-            <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center"><input type="checkbox"
-                    id="id_residuoM" value="5" name="Metales" onclick="MostrarM()">Metales
-            </div>
 
-            <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center"><input type="checkbox"
-                    id="id_residuoA" value="6" name="Aceite" onclick="MostrarA()">Aceite
-            </div>
+            <label for="C_plastico">
+                <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center"><input type="checkbox"
+                        id="id_residuoPl" value="4" name="Plástico" onclick="MostrarPl()">Plástico
+                </div>
+            </label>
+
+
+            <label for="C_metales">
+                <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center"><input type="checkbox"
+                        id="id_residuoM" value="5" name="Metales" onclick="MostrarM()">Metales
+                </div>
+            </label>
+
+
+            <label for="C_aceite">
+                <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center"><input type="checkbox"
+                        id="id_residuoA" value="6" name="Aceite" onclick="MostrarA()">Aceite
+                </div>
+            </label>
+
 
             <!-- Materiales a recoger -->
             <div class="col-12">
@@ -168,7 +185,7 @@
             </div>
 
             <div id="SMaterial" class="col-12">
-                <h5 >No ha seleccionado ningún material.</h5>
+                <h5>No ha seleccionado ningún material.</h5>
             </div>
 
             <div id="MPapel" class="col-12 col-sm-2 " style="display: none;">
@@ -214,17 +231,16 @@
 
             <div id="Idfecha" class="col-12  col-sm-2">
                 <input type="date" class="cuadros" name="Fecha" id="fecha" min="26/09/2022" required>
-                
+
             </div>
-            
+
         </div>
 
 
         <!-- Botón registrarse -->
         <div class="row">
             <div class="col-12 d-flex justify-content-center align-items-center">
-                <button type="submit" class="btn btn-primary" onclick="Recibido();"
-                    value="Solicitud">Solicitar
+                <button type="submit" class="btn btn-primary" onclick="Recibido();" value="Solicitud">Solicitar
                     recolección</button>
             </div>
         </div>
@@ -232,7 +248,7 @@
         <!-- Volver a la página -->
         <div class="row">
             <div class="col-12 d-flex justify-content-center align-items-center">
-                <a href="index.html" >Volver a la página de inicio</a>
+                <a href="index.html">Volver a la página de inicio</a>
             </div>
         </div>
 
