@@ -22,24 +22,42 @@
                 integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
 
-        <link href="css/registro.css" rel="stylesheet">
+        <link href="css/registrarse.css" rel="stylesheet">
         <link rel="shortcut icon" href="img/reciclar.png" />
 
+        <script>
+            function ValidarClave() {
+                var contraseña1 = document.getElementById("clave1").value;
+                var contraseña2 = document.getElementById("clave2").value;
+
+                if (contraseña1 !== contraseña2) {
+                    alert("Las contraseñas no coinciden");
+                }
+            }
+
+            function Mostrar() {
+                document.getElementById("apellido").removeAttribute("readonly");
+                document.getElementById('ocultar').style.display = 'block';
+            }
+            
+            function Desactivar() {
+                document.getElementById("apellido").value="";
+                document.getElementById("apellido").style.display= "readonly";
+            }
+
+        </script>
 
     </head>
 
     <body>
-        <div class="body">
+        <div>
 
-            <main>
-
-                <div class="card d-flex justify-content-center fw-bolder vh-100"
-                     style="padding: 10px; box-shadow: 7px 13px 37px #000;  margin:auto; margin-top:auto; background:#63d94687; width: 100%; height:100%; overflow:hidden;
-                     color:black; font-size:large">
+                <div class="card d-flex justify-content-center fw-bolder"
+                     style="padding: 10px; box-shadow: 7px 13px 37px #000;  margin:auto; margin-top:auto; background:#63d94687; width: 100%; height:100%; overflow:hidden; color:black; font-size:large">
 
                     <div class="row" >
-                        <div class="col-12">
-                            <a title="Volver a la página principal" href="index.html" style="margin-left:80px;" ><img src="img/regresar.png" alt="Volver al inicio" width="40" height="40" align="center"/></a>
+                        <div class="col-12 ">
+                            <a title="Volver a la página principal" href="index.html"><img src="img/regresar.png" alt="Volver al inicio" style="margin-left:20px; margin-top:10px; width:40px; height:40px;"></a>
                         </div>
                     </div>
 
@@ -151,34 +169,8 @@
                         </form>
 
                     </div>
-                    
-
                 </div>
-
-            </main>
-
         </div>
-        <script>
-            function ValidarClave() {
-                var contraseña1 = document.getElementById("clave1").value;
-                var contraseña2 = document.getElementById("clave2").value;
-
-                if (contraseña1 !== contraseña2) {
-                    alert("Las contraseñas no coinciden");
-                }
-            }
-
-            function Mostrar() {
-                document.getElementById("apellido").removeAttribute("readonly");
-                document.getElementById('ocultar').style.display = 'block';
-            }
-            
-            function Desactivar() {
-                document.getElementById("apellido").value="";
-                document.getElementById("apellido").style.display= "readonly";
-            }
-
-        </script>
 
     </body>
 
