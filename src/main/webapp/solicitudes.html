@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recolección</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="shorcut icon" href="https://cdn-icons-png.flaticon.com/512/1676/1676807.png">
+
+    <link href="../css/solicitudes.css" rel="stylesheet">
+
+    <script>
+
+        function MostrarP() {
+            var papel = document.getElementById("MPapel");
+            var aviso = document.getElementById("SMaterial");
+            var checkP = document.getElementById("id_residuoP");
+
+            if (checkP.checked) { papel.style.display = 'block';  aviso.style.display='none'}
+            else { papel.style.display = 'none'; }
+        }
+
+        function MostrarC() {
+            var carton = document.getElementById("MCarton");
+            var checkC = document.getElementById("id_residuoC");
+            var aviso = document.getElementById("SMaterial");
+
+            if (checkC.checked) { carton.style.display = 'block'; aviso.style.display='none'}
+            else { carton.style.display = 'none'; }
+        }
+
+        function MostrarV() {
+            var vidrio = document.getElementById("MVidrio");
+            var checkV = document.getElementById("id_residuoV");
+            var aviso = document.getElementById("SMaterial");
+
+            if (checkV.checked) { vidrio.style.display = 'block'; aviso.style.display='none'}
+            else { vidrio.style.display = 'none'; }
+        }
+
+        function MostrarPl() {
+            var plastico = document.getElementById("MPlastico");
+            var checkPl = document.getElementById("id_residuoPl");
+            var aviso = document.getElementById("SMaterial");
+
+            if (checkPl.checked) { plastico.style.display = 'block'; aviso.style.display='none'}
+            else { plastico.style.display = 'none'; }
+        }
+
+        function MostrarM() {
+            var metal = document.getElementById("MMetales");
+            var checkM = document.getElementById("id_residuoM");
+            var aviso = document.getElementById("SMaterial");
+
+            if (checkM.checked) { metal.style.display = 'block'; aviso.style.display='none'}
+            else { metal.style.display = 'none'; }
+        }
+
+        function MostrarA() {
+            var aceite = document.getElementById("MAceite");
+            var checkA = document.getElementById("id_residuoA");
+            var aviso = document.getElementById("SMaterial");
+
+            if (checkA.checked) { aceite.style.display = 'block'; aviso.style.display='none'}
+            else { aceite.style.display = 'none'; }
+        }
+
+        function Recibido() {
+
+            var aceite = document.getElementById("Cantidad_Aceite").value;
+            var metal = document.getElementById("Cantidad_Metales").value;
+            var plastico = document.getElementById("Cantidad_Plastico").value;
+            var vidrio = document.getElementById("Cantidad_Vidrio").value;
+            var papel = document.getElementById("Cantidad_Papel").value;
+            var carton = document.getElementById("Cantidad_Carton").value;
+
+            if (aceite > 2 || metal > 2 || plastico > 2 || vidrio > 2 || papel > 2 || carton > 2) {
+                alert("Solicitud enviada, gracias por contactarnos.");
+            }
+            else {
+                alert("La cantidad seleccionada es incorrecta.");
+            }
+        }
+
+        function filtro() {
+            var tecla = event.key;
+            if (['.', 'e'].includes(tecla))
+                event.preventDefault()
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <form class="form-solicitud">
+
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <h1>Solicitud de recolección</h1>
+            </div>
+        </div>
+
+        <!-- Notas -->
+        <div class="row">
+            <div class="col-12">
+                <h4>Por favor tener en cuenta: <br></h4>
+                <h5>La cantidad minima de papel a recoger son 3 kilogramos y las cantidades se deben ingresar en
+                    kilogramos.
+                </h5>
+            </div>
+        </div>
+
+        <!-- Material y cantidades -->
+        <div class="row">
+
+            <div class="col-12 d-flex align-items-center">
+                <h4>Seleccione los materiales a recolectar:
+                </h4>
+            </div>
+
+            <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center"><input type="checkbox"
+                    id="id_residuoP" value="1" name="Papel" onclick="MostrarP()">Papel
+            </div>
+
+            <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center"><input type="checkbox"
+                    id="id_residuoC" value="2" name="Cartón" onclick="MostrarC()">Cartón
+            </div>
+
+            <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center"><input type="checkbox"
+                    id="id_residuoV" value="3" name="Vidrio" onclick="MostrarV()">Vidrio
+            </div>
+
+            <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center"><input type="checkbox"
+                    id="id_residuoPl" value="4" name="Plástico" onclick="MostrarPl()">Plástico
+            </div>
+
+            <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center"><input type="checkbox"
+                    id="id_residuoM" value="5" name="Metales" onclick="MostrarM()">Metales
+            </div>
+
+            <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center"><input type="checkbox"
+                    id="id_residuoA" value="6" name="Aceite" onclick="MostrarA()">Aceite
+            </div>
+
+            <!-- Materiales a recoger -->
+            <div class="col-12">
+                <h4>Ingrese la cantidad de material a recoger:</h4>
+            </div>
+
+            <div id="SMaterial" class="col-12">
+                <h5 >No ha seleccionado ningún material.</h5>
+            </div>
+
+            <div id="MPapel" class="col-12 col-sm-2 " style="display: none;">
+                <input type="number" class="cuadros" name="cantidad_papel" id="Cantidad_Papel" placeholder="Papel"
+                    onkeydown="filtro()" min="3" aria-label="Amount">
+            </div>
+
+            <div id="MCarton" class="col-12 col-sm-2 " style="display: none;">
+                <input type="number" class="cuadros" name="cantidad_carton" id="Cantidad_Carton" placeholder="Cartón"
+                    onkeydown="filtro()" min="3">
+            </div>
+
+            <div id="MVidrio" class="col-12 col-sm-2 " style="display: none;">
+                <input type="number" class="cuadros" name="cantidad_vidrio" id="Cantidad_Vidrio" placeholder="Vidrio"
+                    onkeydown="filtro()" min="3">
+            </div>
+
+            <div id="MPlastico" class="col-12 col-sm-2 " style="display: none;">
+                <input type="number" class="cuadros" name="cantidad_plastico" id="Cantidad_Plastico"
+                    placeholder="Plástico" onkeydown="filtro()" min="3">
+            </div>
+
+            <div id="MMetales" class="col-12 col-sm-2 " style="display: none;">
+                <input type="number" class="cuadros" name="cantidad_metales" id="Cantidad_Metales" placeholder="Metales"
+                    onkeydown="filtro()" min="3">
+            </div>
+
+            <div id="MAceite" class="col-12 col-sm-2 " style="display: none;">
+                <input type="number" class="cuadros" name="cantidad_aceite" id="Cantidad_Aceite" placeholder="Aceite"
+                    onkeydown="filtro()" min="3">
+            </div>
+
+        </div>
+
+        <!-- Fecha -->
+        <div class="row">
+
+            <div class="col-12 d-flex align-items-center" style="margin-top:10px">
+                <h4>
+                    Seleccione el día que desea realicen la recolección
+                </h4>
+            </div>
+
+            <div id="Idfecha" class="col-12  col-sm-2">
+                <input type="date" class="cuadros" name="Fecha" id="fecha" min="26/09/2022" required>
+                
+            </div>
+            
+        </div>
+
+
+        <!-- Botón registrarse -->
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <button type="submit" class="btn btn-primary" onclick="Recibido();"
+                    value="Solicitud">Solicitar
+                    recolección</button>
+            </div>
+        </div>
+
+        <!-- Volver a la página -->
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <a href="index.html" >Volver a la página de inicio</a>
+            </div>
+        </div>
+
+    </form>
+
+</body>
+
+</html>
