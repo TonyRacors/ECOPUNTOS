@@ -40,7 +40,7 @@ public class ServletUsuarioRegister extends HttpServlet {
         String contrasena = request.getParameter("contrasena");
         String nombre = request.getParameter("nombre");
         String apellido = request.getParameter("apellido");
-        String direccion = request.getParameter("direcion");
+        String direccion = request.getParameter("direccion");
         String telefono = request.getParameter("telefono");
         String tipo_usuario = request.getParameter("tipo_usuario");
         int total_ecopuntos = Integer.parseInt(request.getParameter("total_ecopuntos"));
