@@ -16,8 +16,9 @@ import controller.UsuarioController;
  */
 @WebServlet("/ServletUsuarioLogin")
 public class ServletUsuarioLogin extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
+
+    private static final long serialVersionUID = 1L;
+
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -26,32 +27,34 @@ public class ServletUsuarioLogin extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-        @Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		
-		UsuarioController usuario = new UsuarioController();
-		String username = request.getParameter("username");
-		String contrasena = request.getParameter("contrasena");
-		String result = usuario.login(username, contrasena);
-		
-		response.setContentType("text/html;charset=UTF-8");
-		PrintWriter out = response.getWriter();
-		out.println(result);
-		out.flush();
-		out.close();
-	}
+    /**
+     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+     * response)
+     */
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // TODO Auto-generated method stub
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-        @Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+        UsuarioController usuario = new UsuarioController();
+        String username = request.getParameter("username");
+        String contrasena = request.getParameter("contrasena");
+        String result = usuario.login(username, contrasena);
+
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        out.println(result);
+        out.flush();
+        out.close();
+    }
+
+    /**
+     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+     * response)
+     */
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {            // el doPost, obtiene el requerimiento y virifica que coincian los datos con la base de datos
+        // TODO Auto-generated method stub
+        doGet(request, response);
+    }
 
 }
