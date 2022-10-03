@@ -22,9 +22,31 @@
                 integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="js/index.js"></script>
-        <link href="css/registrarse.css" rel="stylesheet">
+        <script src="assets/js/index.js"></script>
+        <link href="assets/css/registrarse.css" rel="stylesheet">
         <link rel="shortcut icon" href="img/reciclar.png" />
+        
+        <!-- Favicons -->
+        <link href="assets/img/favicon.png" rel="icon">
+        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+        <!-- Vendor CSS Files -->
+        <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+        <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+        <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+        <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+        <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+        <!-- Template Main CSS File -->
+        <link href="assets/css/style.css" rel="stylesheet">
+        
+        
 
         <script>
             function ValidarClave() {
@@ -51,16 +73,46 @@
     </head>
 
     <body>
-        <div>
+        
+        <header id="header" class="fixed-top">
+            <div class="container d-flex align-items-center">
+
+                <h1 class="logo me-auto"><a href="index.html"><span> ECO</span>PUNTOS</a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+                <nav id="navbar" class="navbar order-last order-lg-0">
+                    <ul>
+                        <li><a href="index.html" class="active">Inicio</a></li>
+
+
+                        <li><a href="services.html">Servicios</a></li>
+                        <li><a href="portfolio.html">Fundación</a></li>
+                        <li><a href="pricing.html">Reciclaje</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="login.html" style="color:#1bbd36;">Login</a></li>
+                        
+
+
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav><!-- .navbar -->
+
+                <div class="header-social-links d-flex">
+                    <a href="#" class="twitter"><i class="bu bi-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="bu bi-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bu bi-instagram"></i></a>
+                    <a href="#" class="linkedin"><i class="bu bi-linkedin"></i></a>
+                </div>
+
+            </div>
+        </header><!-- End Header -->
+        <div style="margin-top:55px;">
 
             <div class="card d-flex justify-content-center fw-bolder"
-                 style="padding: 10px; box-shadow: 7px 13px 37px #000;  margin:auto; margin-top:auto; background:#63d94687; width: 100%; height:100%; overflow:hidden; color:black; font-size:large">
+                 style="padding: 100px; box-shadow: 7px 13px 37px #000;  margin:auto; margin-top:auto; background:#63d94687; width: 100%; height:100%; overflow:hidden; color:black; font-size:large">
 
-                <div class="row" >
-                    <div class="col-12 ">
-                        <a title="Volver a la página principal" href="login.html"><img src="img/regresar.png" alt="Volver al inicio" style="margin-left:20px; margin-top:10px; width:40px; height:40px;"></a>
-                    </div>
-                </div>
+                
 
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center align-items-center">
@@ -104,21 +156,18 @@
 
                         <!-- Username -->
                         <div class="row">
-                            <div class="col-12 justify-content-center align-items-center">Nombre de usuario (*):<br>
+                            <div class="col-6 justify-content-center align-items-center">Nombre de usuario (*):<br>
                                 <input type="text" class="cuadros" name="Username" id="username"
                                        placeholder="Ingresa el nombre de usuario." required>
                             </div>
-                        </div><p></p>
-
-                        <!-- Correo -->
-                        <div class="row">
-
-                            <div class="col-12">Correo electrónico (*):<br>
+                            <!-- Correo -->
+                            
+                            <div class="col-6">Correo electrónico (*):<br>
                                 <input type="email" class="cuadros" name="Correo" id="correo"
                                        placeholder="Ingresa el correo electrónico" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,40}" required>
                             </div>
                         </div><p></p>
-
+                                            
                         <!-- Clave y confirmación -->
                         <div class="row">
 
